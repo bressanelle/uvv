@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão 1 - Média de notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <img src="./images/option.png">
+                <img src="./images/hamburger.png">
+            </div>
+            <div class="card-body">
+                <h1>Lançamento de notas</h1>
+
+                <select>
+                    <option value="1">Programação de computadores</option>
+                    <option value="2">Programação de microondas</option>
+                    <option value="3">Programação de torradeiras</option>
+                </select>
+
+                <table class="notes">
+                    <thead>
+                        <tr>
+                            <th>Aluno</th>
+                            <th>Prova 1</th>
+                            <th>Prova 2</th>
+                            <th>Exame</th>
+                            <th>Média</th>
+                            <th>Faltas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="joana-notes">
+                            <td>Joana da Silva</td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('joana')">
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('joana')">
+
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('joana')">
+
+                            </td>
+                            <td>
+                                <input type="number" disabled>
+                            </td>
+                            <td>
+                                <input type="number" min="0" onchange="calculateNotes('joana')">
+                            </td>
+                        </tr>
+                        <tr id="maria-notes">
+                            <td>Maria do Socorro</td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('maria')">
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('maria')">
+
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('maria')">
+
+                            </td>
+                            <td>
+                                <input type="number" disabled>
+                            </td>
+                            <td>
+                                <input type="number" min="0" onchange="calculateNotes('maria')">
+                            </td>
+                        </tr>
+                        <tr id="pedro-notes">
+                            <td>Pedro Santos</td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('pedro')">
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('pedro')">
+
+                            </td>
+                            <td>
+                                <input type="number" min="0" required onchange="calculateNotes('pedro')">
+
+                            </td>
+                            <td>
+                                <input type="number" disabled>
+                            </td>
+                            <td>
+                                <input type="number" min="0" onchange="calculateNotes('pedro')">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card-footer">
+                <button onclick="onSave()">Salvar</button>
+                <button onclick="onClearInputs()">Limpar</button>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
